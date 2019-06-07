@@ -1,5 +1,7 @@
 # ReactJS Web Application Boilerplate
 
+[![Build Status](https://travis-ci.org/nomadinteractive/reactjs-boilerplate.svg?branch=master)](https://travis-ci.org/nomadinteractive/reactjs-boilerplate)
+
 A react.js web application boilerplate used for new web projects in Nomad Interactive
 
 Technologies we utilize:
