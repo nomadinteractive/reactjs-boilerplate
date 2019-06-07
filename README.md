@@ -12,18 +12,18 @@ Technologies we utilize:
 - Next.js for server rendered pages that are rendered by react components
 
 
-### Demo / Example
+## Demo / Example
 
-A live demo can be found: 
+A live demo can be found: https://ni-reactjs-boilerplate.herokuapp.com/
 
 
-### Run application
+## Run application
 
 1. ```npm install```
 2. ```npm start``` or ```node index.js```
 
 
-### Deploy on heroku
+## Deploy on heroku
 
 1. ```git init``` (if you are not cloning this repo)
 2. ```heroku login``` (if you haven't logged in)
