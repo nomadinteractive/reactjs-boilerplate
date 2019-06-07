@@ -11,6 +11,12 @@ Technologies we utilize:
 - An express wrapper with webpack middleware for development sessions
 - Next.js for server rendered pages that are rendered by react components
 
+
+### Demo / Example
+
+A live demo can be found: 
+
+
 ### Run application
 
 1. ```npm install```
