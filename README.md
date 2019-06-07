@@ -17,7 +17,16 @@ Technologies we utilize:
 A live demo can be found: https://ni-reactjs-boilerplate.herokuapp.com/
 
 
-## Run application
+## Create .env file
+
+Create a new file with name .env and set up your application configuration here. The variables defined with an example below:
+
+```
+PORT=4600
+```
+
+
+## Run the application
 
 1. ```npm install```
 2. ```npm start``` or ```node index.js```
