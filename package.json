@@ -1,0 +1,23 @@
+{
+  "name": "nomad-reactjs-boilerplate",
+  "version": "1.0.0",
+  "description": "A ReactJS boilerplate web application",
+  "author": "Nomad Interactive",
+  "homepage": "https://github.com/nomadinteractive/reactjs-boilerplate#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+	"start": "node index.js",
+	"dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomadinteractive/reactjs-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nomadinteractive/reactjs-boilerplate/issues"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
