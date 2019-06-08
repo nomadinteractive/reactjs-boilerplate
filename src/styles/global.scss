@@ -1,0 +1,18 @@
+* {
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+body {
+	font-size: 16px/24px;
+}
+
+.content-wrapper {
+	width: 600px;
+	margin: 30px auto;
+
+	nav.main-nav {
+		border-bottom: 1px solid #cccccc;
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+	}
+}
