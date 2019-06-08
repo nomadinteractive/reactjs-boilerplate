@@ -6,28 +6,19 @@ const { PORT } = process.env
 
 config.mode = 'development'
 
-/*
+// config.devtool = 'cheap-module-eval-source-map'
 
-From a legacy webpack dev config - To be cleaned up
+config.entry.push(`webpack-hot-middleware/client?path=http://localhost:${PORT}/__webpack_hmr`)
 
-config.devtool = 'cheap-module-eval-source-map'
-
-config.entry = [
-	`webpack-hot-middleware/client?path=http://localhost:${PORT}/__webpack_hmr`,
-	'./src/app'
-]
-
-config.output.publicPath = `http://localhost:${PORT}/dist/`
+config.output.publicPath = `http://localhost:${PORT}/`
 
 config.plugins.push(
-	// new webpack.HotModuleReplacementPlugin(),
+	new webpack.HotModuleReplacementPlugin(),
 	// new webpack.NoErrorsPlugin(),
-	new webpack.DefinePlugin({
-		__DEV__: true,
-		'process.env': JSON.stringify('development')
-	})
+	// new webpack.DefinePlugin({
+	// 	__DEV__: true,
+	// 	'process.env': JSON.stringify('development')
+	// })
 )
-
-*/
 
 module.exports = config
