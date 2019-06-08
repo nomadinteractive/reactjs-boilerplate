@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
-const path = require('path')
 const webpack = require('webpack')
+const path = require('path')
 const webpackMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
 const app = require('./server.base')
@@ -20,10 +20,14 @@ app.use(webpackMiddleware(compiler, {
 
 app.use(webpackHotMiddleware(compiler))
 
-app.get('/', (req, res) => {
-	// TODO: webpack to serve the index.html with the webpack url import
-	console.log('index requested')
-	res.sendFile(path.join(__dirname, 'src', 'index.html'))
+app.get('*', (req, res, next) => {
+	const filename = path.join(compiler.outputPath, 'index.html')
+	compiler.outputFileSystem.readFile(filename, (err, result) => {
+		if (err) return next(err)
+		res.set('content-type', 'text/html')
+		res.send(result)
+		res.end()
+	})
 })
 
 app.listen(PORT, () => console.log(`App (dev) listening on port ${PORT}!`))
