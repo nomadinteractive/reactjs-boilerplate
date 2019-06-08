@@ -3,10 +3,17 @@ import PropTypes from 'prop-types'
 
 class Button extends React.Component {
 	render() {
-		const { children } = this.props
+		const {
+			children,
+			onClick
+		} = this.props
 
 		return (
-			<button type="button" className="btn">
+			<button
+				type="button"
+				className="btn"
+				onClick={onClick}
+			>
 				{children}
 			</button>
 		)
@@ -14,7 +21,12 @@ class Button extends React.Component {
 }
 
 Button.propTypes = {
-	children: PropTypes.string.isRequired
+	children: PropTypes.string.isRequired,
+	onClick: PropTypes.func
+}
+
+Button.defaultProps = {
+	onClick: () => {}
 }
 
 export default Button
