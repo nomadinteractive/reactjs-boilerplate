@@ -10,7 +10,7 @@
     "start": "node server.production.js",
     "build": "webpack --config webpack.config.production.js",
     "dev": "nodemon server.development.js",
-    "clean": "eslint --fix ./src"
+    "clean": "eslint --ext .js --ext .jsx --ext .json src/"
   },
   "repository": {
     "type": "git",
