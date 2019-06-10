@@ -10,7 +10,8 @@
     "start": "node server.production.js",
     "build": "webpack --config webpack.config.production.js",
     "dev": "nodemon server.development.js",
-    "clean": "eslint --ext .js --ext .jsx --ext .json src/"
+    "clean": "eslint --ext .js --ext .jsx --ext .json src/",
+    "flow": "flow"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,6 @@
   "dependencies": {
     "axios": "^0.19.0",
     "express": "^4.17.1",
-    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.9.0",
@@ -33,7 +33,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
+    "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.6",
@@ -44,6 +46,7 @@
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
+    "flow-bin": "^0.100.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",

@@ -1,5 +1,6 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import { getUsersDataAction } from '../../actions/index'
@@ -14,9 +15,20 @@ const mapDispatchToProps = dispatch => ({
 	}
 })
 
-class Users extends React.Component {
+type Props = {
+	users?: Object[],
+	getUsersData?: Function
+}
+
+class Users extends React.Component<Props> {
+	static defaultProps = {
+		users: [],
+		getUsersData: () => {}
+	}
+
 	componentDidMount() {
 		const { getUsersData } = this.props
+		// $FlowIgnore
 		getUsersData()
 	}
 
@@ -29,7 +41,7 @@ class Users extends React.Component {
 			<div>
 				<h2>Users</h2>
 				<ul>
-					{users.map(user => (
+					{users && users.map(user => (
 						<li key={user.id}>
 							{user.name}
 						</li>
@@ -38,16 +50,6 @@ class Users extends React.Component {
 			</div>
 		)
 	}
-}
-
-Users.propTypes = {
-	users: PropTypes.array,
-	getUsersData: PropTypes.func
-}
-
-Users.defaultProps = {
-	users: [],
-	getUsersData: () => {}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Users)

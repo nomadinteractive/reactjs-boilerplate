@@ -30,4 +30,4 @@ app.get('*', (req, res, next) => {
 	})
 })
 
-app.listen(PORT, () => console.log(`App (dev) listening on port ${PORT}!`))
+app.listen(PORT, () => console.log(`App (dev) listening on http://localhost:${PORT}`))

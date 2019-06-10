@@ -25,6 +25,12 @@
     },
     "plugins": [
         "import",
-        "react"
-    ]
+		"react",
+		"flowtype"
+	],
+	"settings": {
+		"flowtype": {
+			"onlyFilesWithFlowAnnotation": true
+		}
+	}
 }

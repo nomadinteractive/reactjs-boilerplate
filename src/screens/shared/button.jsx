@@ -1,7 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+// @flow
 
-class Button extends React.Component {
+import React from 'react'
+// import PropTypes from 'prop-types' // TODO: npm rm
+
+type Props = {
+	children: string,
+	onClick?: Function
+}
+
+class Button extends React.Component<Props> {
+	static defaultProps = {
+		onClick: () => {}
+	}
+
 	render() {
 		const {
 			children,
@@ -18,15 +29,6 @@ class Button extends React.Component {
 			</button>
 		)
 	}
-}
-
-Button.propTypes = {
-	children: PropTypes.string.isRequired,
-	onClick: PropTypes.func
-}
-
-Button.defaultProps = {
-	onClick: () => {}
 }
 
 export default Button

@@ -1,5 +1,6 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import { increaseClickCountAction } from '../../actions/index'
@@ -15,7 +16,12 @@ const mapDispatchToProps = dispatch => ({
 	}
 })
 
-class Counter extends React.Component {
+type Props = {
+	clicks: number,
+	handleIncreaseButtonClick: Function
+}
+
+class Counter extends React.Component<Props> {
 	render() {
 		const {
 			clicks,
@@ -30,6 +36,7 @@ class Counter extends React.Component {
 					{clicks}
 				</h2>
 				<Button
+					// $FlowIgnore
 					onClick={() => { handleIncreaseButtonClick() }}
 				>
 					Increase
@@ -37,16 +44,6 @@ class Counter extends React.Component {
 			</div>
 		)
 	}
-}
-
-Counter.propTypes = {
-	clicks: PropTypes.number,
-	handleIncreaseButtonClick: PropTypes.func
-}
-
-Counter.defaultProps = {
-	clicks: 0,
-	handleIncreaseButtonClick: () => {}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter)
