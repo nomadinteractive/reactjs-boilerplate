@@ -1,7 +1,6 @@
 // @flow
 
 import React from 'react'
-// import PropTypes from 'prop-types' // TODO: npm rm
 
 type Props = {
 	children: string,
