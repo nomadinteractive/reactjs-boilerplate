@@ -40,3 +40,8 @@ PORT=4600
 2. ```heroku login``` (if you haven't logged in)
 3. ```heroku create```
 4. ```git push heroku master```
+
+
+### References
+
+- React Redux https://www.valentinog.com/blog/redux/

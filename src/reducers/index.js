@@ -1,8 +1,12 @@
+// import { combineReducers } from 'redux'
+// import * as reducers from './reducers'
+
 import {
 	INCREASE_CLICK_COUNT,
 	USER_DATA_LOADED
 } from '../constants/action-types'
 
+// App State
 const initialState = {
 	clicks: 0,
 	users: []
@@ -22,5 +26,12 @@ const rootReducer = (state = initialState, action) => {
 		return state
 	}
 }
+
+// const rootReducer = combineReducers({
+// 	usersReducers,
+// 	coutnerReducers
+// })
+// or with import * ...
+// const rootReducer = combineReducers(reducers)
 
 export default rootReducer
